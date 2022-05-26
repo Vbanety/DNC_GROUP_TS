@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+
+:root {
+  --green-dark: #0b582c;
+  --green-middle: #1fbf76;
+  --green-switch: #92f075;
+
+  --gradient-background-color: linear-gradient(to right, var(--green-switch), var(--green-middle));
+
+  --grey-light: #f7f8f8;
+  --grey-middle: #d8e2e2;
+  --black-middle-light: #1d262b;
+
+  --purple-dark: #180f55;
+}
+
+body {
+  position: relative;
+  transition: all .8s ease-in-out;
+}
+
+ul li {
+  /* list-style: none; */
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.navbar {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 2rem;
+  z-index: 10;
+}
+
+.navbar button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-weight: 700;
+  color: var(--purple-dark);
+  background: linear-gradient(0.25turn, var(--green-switch),  var(--green-middle));
+  position: relative;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar button:hover {
+  box-shadow: 4px 4px 10px rgba(0,0,0,.2);
+  opacity: .8;
+  cursor: pointer;
+}
+
+.burger {
+  display: none;
+}
+
+.navbar button::after {
+  position: absolute;
+  left: -32px;
+  top: -15px;
+  content: 'Comece por aqui';
+  width: 100%;
+  height: auto;
+  font-weight: 400;
+  font-size: smaller;
+  color: #d9d9d9;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 45%;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.navbar ul li:hover {
+  color: var(--green-switch);
+  transition-duration: .500ms;
+  transform: scale(1.2);
+  transition: all .5s;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar .logCompany {
+  width: 20%;
+}
+
+.navbar .logCompany img {
+  width: 150px;
+}
+
+.navbar button:hover {
+  cursor: pointer
+}
+
+@media (max-width: 600px) {
+
+  .navbar {
+    height: 10vh;
+  }
+
+  .navbar ul,
+  .navbar button {
+    display: none;
+  }
+
+
+  .burger {
+    display: block;
+    width: 25px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .container {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .section {
+    width: 100% !important;
+    padding: 1 .5rem !important;
+  }
+  header h1 {
+    font-size: 18px;
+  }
+}
